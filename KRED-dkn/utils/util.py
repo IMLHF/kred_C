@@ -9,7 +9,6 @@ from itertools import repeat
 from collections import OrderedDict
 from sentence_transformers import SentenceTransformer
 import requests
-import math
 import zipfile
 #from logger.logger import *
 from tqdm import tqdm
@@ -266,6 +265,9 @@ def get_user2item_data(config):
             for i in range(negative_num):
                 label[-1].append(0)
             label[-1].append(1)
+    # print(user_id, news_id, label, "lhf") # ['U13740_train'] [['N35729', 'N0', 'N0', 'N0', 'N55689']] [[0, 0, 0, 0, 1]] lhf
+    # exit(0)
+        
 
     train_data['item1'] = user_id
     train_data['item2'] = news_id

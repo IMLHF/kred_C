@@ -3,7 +3,7 @@ n_gpu: 1
 data_loader:
     batch_size: 64
     shuffle: true
-    num_workers: 1
+    num_workers: 10
 
 data:
   train_news : "../MIND/small_train/news.tsv"
