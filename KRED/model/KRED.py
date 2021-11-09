@@ -60,8 +60,9 @@ class KREDModel(nn.Module):
                                                        user_embedding.shape[1],
                                                        user_embedding.shape[2])
         else:
-            user_embedding = self.user_modeling(user_features)
-            candidate_news_embedding, topk_index = self.news_embedding(news_features)
+            user_embedding = self.user_modeling(user_features)#  [batch, 100]
+            candidate_news_embedding, topk_index = self.news_embedding(news_features) # [batch, train_neg_num+1, 100]
+            
             if len(candidate_news_embedding.shape) > len(user_embedding.shape):
                 user_embedding = torch.unsqueeze(user_embedding, 1)
                 user_embedding = user_embedding.expand(user_embedding.shape[0], candidate_news_embedding.shape[1],
