@@ -6,10 +6,10 @@ data_loader:
     num_workers: 10
 
 data:
-  train_news : "../MIND/small_train/news.tsv"
-  train_behavior : "../MIND/small_train/behaviors.tsv"
-  valid_news : "../MIND/small_dev/news.tsv"
-  valid_behavior : "../MIND/small_dev/behaviors.tsv"
+  train_news : "../MIND/large_train/news.tsv"
+  train_behavior : "../MIND/large_train/behaviors.tsv"
+  valid_news : "../MIND/large_dev/news.tsv"
+  valid_behavior : "../MIND/large_dev/behaviors.tsv"
   knowledge_graph : "../kg/wikidata-graph/triple2id.txt"
   entity_embedding : "../kg/wikidata-graph/entity2vecd100.vec"
   relation_embedding : "../kg/wikidata-graph/relation2vecd100.vec"
