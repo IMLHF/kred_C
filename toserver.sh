@@ -28,13 +28,13 @@ elif [ "$site" == "bss13003" ]; then
 elif [ "$site" == "bss13004" ]; then
   echo "To $user@$site:~/worklhf/other/chx/kred/$2"
   rsync -avh -e 'ssh -p 13004' --exclude-from='.gitignore' ./$2/* $user@10.221.224.210:/root/worklhf/other/chx/kred/$2
-elif [ "$site" == "vf113006" ]; then
+elif [ "$site" == "bss13006" ]; then
   echo "To $user@$site:~/worklhf/other/chx/kred/$2"
   rsync -avh -e 'ssh -p 13006' --exclude-from='.gitignore' ./$2/* $user@10.221.224.210:/root/worklhf/other/chx/kred/$2
-elif [ "$site" == "vf213007" ]; then
+elif [ "$site" == "bss13007" ]; then
   echo "To $user@$site:~/worklhf/other/chx/kred/$2"
   rsync -avh -e 'ssh -p 13007' --exclude-from='.gitignore' ./$2/* $user@10.221.224.210:/root/worklhf/other/chx/kred/$2
-elif [ "$site" == "vf313008" ]; then
+elif [ "$site" == "bss13008" ]; then
   echo "To $user@$site:~/worklhf/other/chx/kred/$2"
   rsync -avh -e 'ssh -p 13008' --exclude-from='.gitignore' ./$2/* $user@10.221.224.210:/root/worklhf/other/chx/kred/$2
 fi

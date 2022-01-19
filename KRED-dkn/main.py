@@ -7,11 +7,11 @@ from utils.util import load_data_mind
 import os
 
 def main(config):
-    data = load_data_mind(config)
-    with open("../data/data_mind_large.pkl", 'wb') as f:
-        pickle.dump(data, f)
-    # with open("../data/data_mind_large.pkl", 'rb') as f:
-    #     data = pickle.load(f)
+    # data = load_data_mind(config)
+    # with open("../data/data_mind_large.pkl", 'wb') as f:
+    #     pickle.dump(data, f)
+    with open("../data/data_mind_large.pkl", 'rb') as f:
+        data = pickle.load(f)
     if config['trainer']['training_type'] == "single_task":
         single_task_training(config, data)
     else:
